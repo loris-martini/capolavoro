@@ -1,0 +1,90 @@
+* {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: white;*/
+    padding: 20px 20px;
+    color: #fff;
+    border: 0.2px solid gray;
+  }
+  
+  .navbar .logo a {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  
+  .nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #256dda;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    border-radius: 5px;
+  }
+  
+  .dropdown-menu li {
+    padding: 5px 10px;
+    opacity: 1;
+  }
+
+  .dropdown-menu li:hover{
+    opacity: 0.5;
+  }
+  
+  .dropdown-menu a {
+    color: #fff;
+  }
+  
+  .cta .btn {
+    background-color: #256dda;
+    color: #fff;
+    padding: 10px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+  }
+  
+  .cta .btn.secondary {
+    background-color: white;
+    color: #256dda;
+    border: 2px solid #256dda;
+
+  }
+  
+  .cta .btn:hover {
+    opacity: 0.5;
+  }
+  

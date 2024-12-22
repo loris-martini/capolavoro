@@ -1,0 +1,13 @@
+#crypto-title{
+    padding: 20px;
+}
+
+#crypto-description{
+    padding: 20px;
+}
+
+#crypto-chart{
+    display: flex;
+    height: 700px;
+    padding: 20px;
+}
