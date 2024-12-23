@@ -8,10 +8,9 @@ const menuData = {
       {
         text: "Crypto",
         dropdown: [
-          { text: "DogeCoin", link: "../servizi/coin.html?crypto=DOGEUSD" },
-          { text: "PepeCoin", link: "../servizi/coin.html?crypto=PEPEUSD" },
-          { text: "PenguCoin", link: "../servizi/coin.html?crypto=PENGUSDT" },
-          { text: "Analisi Assicurativa", link: "insurance.html" }
+          { text: "DogeCoin", link: "../crypto/coin.html?crypto=DOGEUSD" },
+          { text: "PepeCoin", link: "../crypto/coin.html?crypto=PEPEUSD" },
+          { text: "PenguCoin", link: "../crypto/coin.html?crypto=PENGUSDT" }
         ]
       },
       { text: "Risorse", link: "../risorse/risorse.html" },
@@ -56,6 +55,7 @@ const menuData = {
         const dropdownMenu = document.createElement("ul");
         dropdownMenu.className = "dropdown-menu";
   
+        // Aggiunta delle sottovoci
         link.dropdown.forEach(subLink => {
           const subLi = document.createElement("li");
           const subA = document.createElement("a");
@@ -64,6 +64,31 @@ const menuData = {
           subLi.appendChild(subA);
           dropdownMenu.appendChild(subLi);
         });
+  
+        // Aggiunta della casella di testo
+        const inputLi = document.createElement("li");
+        inputLi.style.padding = "5px 20px 5px 23px"; // Styling opzionale
+        const inputBox = document.createElement("input");
+        inputBox.type = "text";
+        inputBox.placeholder = "es. BTCUSD";
+        inputBox.style.width = "50%"; // Styling opzionale
+  
+        // Bottone per inviare l'input
+        const goButton = document.createElement("button");
+        goButton.textContent = "Vai";
+        goButton.style.marginLeft = "5px"; // Styling opzionale
+        goButton.addEventListener("click", () => {
+          const symbol = inputBox.value.trim();
+          if (symbol) {
+            window.location.href = `../crypto/coin.html?crypto=${symbol}`;
+          } else {
+            alert("Inserisci un simbolo valido.");
+          }
+        });
+  
+        inputLi.appendChild(inputBox);
+        inputLi.appendChild(goButton);
+        dropdownMenu.appendChild(inputLi);
   
         li.appendChild(dropdownMenu);
       } else {
@@ -98,4 +123,5 @@ const menuData = {
   
   // Genera il menu
   generateMenu("menu-container", menuData);
+  
   

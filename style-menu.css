@@ -1,90 +1,118 @@
 * {
-    font-family: Inter, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* background-color: white;*/
-    padding: 20px 20px;
-    color: #fff;
-    border: 0.2px solid gray;
-  }
-  
-  .navbar .logo a {
-    font-size: 25px;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-  }
-  
-  .nav-links li {
-    position: relative;
-  }
-  
-  .nav-links a {
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 15px;
-  }
-  
-  .nav-links .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #256dda;
-    list-style: none;
-    padding: 10px 0;
-    min-width: 200px;
-    border-radius: 5px;
-  }
-  
-  .dropdown-menu li {
-    padding: 5px 10px;
-    opacity: 1;
-  }
+  font-family: Inter, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .dropdown-menu li:hover{
-    opacity: 0.5;
-  }
-  
-  .dropdown-menu a {
-    color: #fff;
-  }
-  
-  .cta .btn {
-    background-color: #256dda;
-    color: #fff;
-    padding: 10px 12px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 5px;
-  }
-  
-  .cta .btn.secondary {
-    background-color: white;
-    color: #256dda;
-    border: 2px solid #256dda;
+body{
+  background-color: rgb(19, 23, 34) ;
+  background-image: url('../img/back.jpg'); /* Sostituisci con il percorso della tua immagine */
 
-  }
+  /* Fai sì che l'immagine copra tutto lo sfondo */
+  background-size: cover;
   
-  .cta .btn:hover {
-    opacity: 0.5;
-  }
-  
+  /* Centra l'immagine */
+  background-position: center;
+
+  /* Assicura che l'immagine non si ripeta */
+  background-repeat: no-repeat;
+
+  /* Rendi l'immagine fissa mentre scorri */
+  background-attachment: fixed;
+
+  /* Aggiungi un filtro per migliorare la leggibilità del testo sopra */
+  filter: brightness(0.8); /* Scurisce leggermente lo sfondo */
+}
+
+.navbar {
+  /*background-color: #F1C40F;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  color: #fff;
+  border-bottom: 2px solid #F1C40F;
+}
+
+.navbar .logo a {
+  font-size: 25px;
+  font-weight: bold;
+  color: #F1C40F;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 15px;
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #F1C40F;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  border-radius: 5px;
+}
+
+.dropdown-menu li {
+  padding: 5px 10px;
+  opacity: 1;
+}
+
+.dropdown-menu li:hover{
+  opacity: 0.5;
+}
+
+.dropdown-menu a {
+  color: #fff;
+}
+
+.cta .btn {
+  background-color: #F1C40F;
+  color: #fff;
+  padding: 10px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.cta .btn.secondary {
+  background-color: white;
+  color: #F1C40F;
+  border: 2px solid #F1C40F;
+
+}
+
+.cta .btn:hover {
+  opacity: 0.5;
+}
+
+button{
+  background-color: #F1C40F;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 5px;
+}

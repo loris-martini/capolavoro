@@ -1,0 +1,22 @@
+#crypto-title{
+    color: #fff;
+    font-size: 80px;
+    padding: 20px;
+}
+
+#crypto-chart{
+    height: 700px;
+    padding: 20px;
+}
+
+
+#crypto-description {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    margin: 20px auto;
+}
+
