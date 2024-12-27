@@ -46,3 +46,21 @@ ul li {
     font-size: 16px;
     margin-bottom: 10px;
 }
+
+.toLink{
+    color: #fff;
+    text-decoration: none;
+}
+
+.toLink:hover {
+    color: #F1C40F;
+}
+
+.toLink:visited {
+    color: #fff; 
+}
+
+.toLink:active {
+    color: #F1C40F;
+}
+  

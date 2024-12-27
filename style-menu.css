@@ -5,23 +5,13 @@
 }
 
 body{
+  background-image: url('img/back.jpg');
   background-color: rgb(19, 23, 34) ;
-  background-image: url('../img/back.jpg'); /* Sostituisci con il percorso della tua immagine */
-
-  /* Fai sì che l'immagine copra tutto lo sfondo */
   background-size: cover;
-  
-  /* Centra l'immagine */
   background-position: center;
-
-  /* Assicura che l'immagine non si ripeta */
   background-repeat: no-repeat;
-
-  /* Rendi l'immagine fissa mentre scorri */
   background-attachment: fixed;
-
-  /* Aggiungi un filtro per migliorare la leggibilità del testo sopra */
-  filter: brightness(0.8); /* Scurisce leggermente lo sfondo */
+  filter: brightness(0.8);
 }
 
 .navbar {

@@ -1,24 +1,26 @@
+const basePath = window.location.origin;
 const menuData = {
     logo: {
       text: "MemeCoin",
-      link: "index.html"
+      link: `${basePath}/capolavoro/index.html`
     },
     links: [
-      { text: "Home", link: "../index.html" },
+      { text: "Home", link: `${basePath}/capolavoro/index.html` },
       {
         text: "Crypto",
         dropdown: [
-          { text: "DogeCoin", link: "../crypto/coin.html?crypto=DOGEUSD" },
-          { text: "PepeCoin", link: "../crypto/coin.html?crypto=PEPEUSD" },
-          { text: "PenguCoin", link: "../crypto/coin.html?crypto=PENGUSDT" }
+          { text: "DogeCoin", link: `${basePath}/capolavoro/crypto/coin.html?crypto=DOGEUSD` },
+          { text: "PepeCoin", link: `${basePath}/capolavoro/crypto/coin.html?crypto=PEPEUSD` },
+          { text: "PenguCoin", link: `${basePath}/capolavoro/crypto/coin.html?crypto=PENGUSDT` },
+          { text: "PiCoin", link: `${basePath}/capolavoro/crypto/coin.html?crypto=PIUSDT` }
         ]
       },
-      { text: "Risorse", link: "../risorse/risorse.html" },
-      { text: "Chi Sono", link: "about.html" }
+      { text: "Risorse", link: `${basePath}/capolavoro/risorse/risorse.html` },
+      { text: "Chi Sono", link: `${basePath}/capolavoro/risorse/about.html` }
     ],
     cta: [
-      { text: "Iscriviti", link: "signup.html", class: "btn" },
-      { text: "Accedi", link: "login.html", class: "btn secondary" }
+      { text: "Iscriviti", link: `${basePath}/capolavoro/personal/iscrizione.php`, class: "btn" },
+      { text: "Accedi", link: `${basePath}/capolavoro/personal/accedi.php`, class: "btn secondary" }
     ]
   };
   

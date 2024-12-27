@@ -73,8 +73,29 @@
     <h3>PenguCoin e il Mercato delle Criptovalute</h3>
     <p>PenguCoin si distingue per la sua natura giocosa e informale, ma è anche una parte integrante di un fenomeno più ampio: le meme coin. Sebbene il suo valore possa essere volatile e dipenda in gran parte dall'entusiasmo della sua comunità e dai trend sui social media, molte persone trovano in PenguCoin una possibilità di investimento più "leggera" e divertente rispetto a criptovalute più tradizionali come Bitcoin ed Ethereum.</p>
   `;
+
+  const piCoinText = `<h2>Informazioni su PiCoin</h2>
+    <p>PiCoin, spesso associato a Pi Network, è una criptovaluta che mira a rendere il mining accessibile a tutti attraverso dispositivi mobili.<br>
+    L'obiettivo principale del progetto è creare una piattaforma decentralizzata che consenta agli utenti di minare PiCoin senza consumare eccessive risorse energetiche, 
+    differenziandosi così dal mining tradizionale di criptovalute come Bitcoin.</p>
+    <br>
+    <h3>Stato Attuale e Valore di PiCoin</h3>
+    <p>Al momento, PiCoin non è quotato su exchange pubblici riconosciuti, il che significa che non ha un valore di mercato ufficiale.<br>
+    Secondo Changelly, a partire dall'inizio del 2024, PiCoin è un token non quotato in borsa.<br>
+    Tuttavia, alcune piattaforme riportano dati sul prezzo di PiCoin; ad esempio, Coinbase indica un prezzo di circa 46,25 € per PI, con un volume di scambi nelle 24 ore di 241.402,63 €.<br>
+    È importante notare che questi dati potrebbero non riflettere accuratamente il valore reale di PiCoin, data la sua non quotazione ufficiale.</p>
+    <br>
+    <h3>Previsioni Future</h3>
+    <p>Le previsioni sul valore futuro di PiCoin variano significativamente.<br>
+    Alcuni analisti suggeriscono che, una volta quotato, il prezzo potrebbe iniziare da valori molto bassi, come 0,007 $, mentre altri ipotizzano che potrebbe raggiungere valori più alti, come 54,08 $, entro il 2025.<br>
+    Tuttavia, queste stime sono speculative e dipendono da vari fattori, tra cui l'adozione da parte degli utenti e lo sviluppo della rete.</p>
+    <br>
+    <h3>Considerazioni sulla Sicurezza</h3>
+    <p>Sono state sollevate preoccupazioni riguardo alla raccolta di dati personali da parte di Pi Network, in particolare attraverso processi di verifica dell'identità che richiedono documenti sensibili.<br>
+    Secondo un articolo su Binance Square, gli utenti che forniscono dati sensibili come ID rilasciati dal governo si espongono a potenziali furti di identità, frodi o uso improprio delle loro informazioni personali.<br>
+    È essenziale che gli utenti siano consapevoli dei rischi associati alla condivisione di informazioni personali e valutino attentamente la legittimità e la trasparenza del progetto.</p>
+  `;
     
-    // Esegui modifiche basate sul parametro 'crypto'
     switch(symbol) {
       case 'PEPEUSD':
         title = 'PepeCoin (USD)';
@@ -90,6 +111,11 @@
         title = 'PenguCoin (USDT)';
         description = penguCoinText;
         chartSymbol = 'MEXC:PENGUSDT'; 
+        break;
+      case 'PIUSDT':
+        title = 'PiCoin (USDT)';
+        description = piCoinText;
+        chartSymbol = 'HTX:PIUSDT';
         break;
       default:
         title = `${symbol}`; //title = 'Errore: criptovaluta non riconosciuta';
