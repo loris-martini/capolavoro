@@ -6,6 +6,7 @@
     <link rel="icon" href="../img/icon.png" type="image/x-icon"> <!-- Icon -->
     <link rel="stylesheet" href="../style-menu.css"> <!-- Style -->
     <link rel="stylesheet" href="../style-txt.css"> <!-- Style -->
+    <link rel="stylesheet" href="style-form.css"> <!-- Style -->
     <title>Registrazione</title>
 </head>
 
@@ -43,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       'email' => $_POST['mail'],
       'password' => $_POST['pwd']
     ];
-    header("Location: login.php");
+    header("Location: accedi.php");
     exit();
   }
 }
@@ -60,64 +61,32 @@ function test_input($data) {
 <body>
   <div id="menu-container"></div>
   <script src="../script-menu.js"></script>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Sito Votazioni</a>
-      
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="registrazione.php">Registrazione</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.php">Login</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  <!-- registrazione Content 
-   id="text"
-   id="text"
-   id="inputEmail"
-   id="text"
-   -->
-  <div class="container my-5">
-    <h1 class="text-center">Registrazione</h1>
 
-    <form class="row g-3" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-      <div class="col-md-6">
-        <label for="inputName" class="form-label">Nome</label>
-        <input type="text" class="form-control" name="name" value="<?=$name?>" placeholder="Name" required>
+  <main>
+    <h2>Registrazione</h2>
+    <br>
+    <form action="<?= htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+      <div class="form-group">
+        <label for="inputName">Nome</label>
+        <input type="text" class="form-control" name="name" value="<?=$name?>" placeholder="Inserisci il tuo nome" required>
       </div>
-      <div class="col-md-6">
-        <label for="inputName" class="form-label">Cognome</label>
-        <input type="text" class="form-control" name="surname" value="<?=$surname?>" required>
+      <div class="form-group">
+        <label for="inputSurname">Cognome</label>
+        <input type="text" class="form-control" name="surname" value="<?=$surname?>" placeholder="Inserisci il tuo cognome" required>
       </div>
-      <div class="col-md-6">
-        <label for="inputName" class="form-label">E-mail</label>
-        <span class="error">* <?= $emailErr;?></span>
-        <input type="email" class="form-control" name="mail" value="<?=$email?>" required>
+      <div class="form-group">
+        <label for="inputEmail">E-mail</label>
+        <span class="error"><?= $emailErr;?></span>
+        <input type="email" class="form-control" name="mail" value="<?=$email?>" placeholder="Inserisci la tua e-mail" required>
       </div>
-      <div class="col-md-6">
-        <label for="inputEmail" class="form-label">Password</label>
-        <span class="error">* <?= $passwordErr;?></span>
-        <input type="password" class="form-control" name="pwd" required>
+      <div class="form-group">
+        <label for="inputPassword">Password</label>
+        <span class="error"><?= $passwordErr;?></span>
+        <input type="password" class="form-control" name="pwd" placeholder="Inserisci la tua password" required>
       </div>
-      <input class="btn btn-light btn-lg" type="submit" name="submit" value="Registrati">
+      <button class="btn btn-submit" type="submit" name="submit">Registrati</button>
     </form>
-  </div>
+  </main>
 
-  <!-- Footer -->
-  <footer class="bg-light text-center p-3 mt-5">
-    <p><b>ITT BUONARROTI TRENTO</b></p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
