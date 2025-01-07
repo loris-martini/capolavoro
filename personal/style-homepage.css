@@ -1,0 +1,17 @@
+.delete-form {
+    position: absolute; /* Posizione assoluta rispetto al contenitore */
+    top: 75px; /* Distanza dalla parte superiore della pagina */
+    right: 5px; /* Distanza dal lato destro della pagina */
+}
+
+.delete-form button {
+    padding: 10px 20px; /* Aggiungi spazio interno per migliorare il design */
+    border: none; /* Rimuovi i bordi */
+    cursor: pointer; /* Cambia il cursore per indicare cliccabilità */
+    font-size: 14px; /* Dimensione del testo */
+    border-radius: 5px; /* Angoli arrotondati */
+}
+
+.delete-form button:hover {
+    background-color: #ffcccc; /* Cambia colore di sfondo al passaggio del mouse */
+}
